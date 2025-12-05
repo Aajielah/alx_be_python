@@ -28,14 +28,24 @@ def convert_to_fahrenheit(celsius):
 # --- 3. User Interaction & Main Execution ---
 
 def main():
-   temprature = float(input("Enter the temperature to convert: "))
-   type = input("Is this temperature in Celsius or Fahrenheit? (C/F): ")
+   while True:
+        try:
+            temperature = float(input("Enter the temperature to convert: "))
+            temperature_type = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().lower()
 
-   if type == "F" or "f":
-       print(f"{temprature} fahrenheit converted to degree celsius  is {convert_to_celsius(temprature)}")
+            if temperature_type not in ("f", "c"):
+                print("The temperature type has to be either F OR C ")
+                continue
 
-   elif type == "C" or "c":
-       print(f"{temprature} degree celsius converted to fahrenheit is {convert_to_fahrenheit(temprature)}")
+        except ValueError as e:
+            print(f"Enter a correct value {e}")
+            continue
+        else:
+            if temperature_type == "f" :
+                print(f"{temperature} fahrenheit converted to degree celsius  is {convert_to_celsius(temperature)}")
+            elif temperature_type == "c":
+                    print(f"{temperature} degree celsius converted to fahrenheit is {convert_to_fahrenheit(temperature)}")
+            break
 
 # This check ensures the script runs only when executed directly
 if __name__ == "__main__":
