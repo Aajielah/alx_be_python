@@ -33,8 +33,8 @@ def main():
                 print("The temperature type has to be either F OR C ")
                 continue
 
-        except ValueError as e:
-            print(f"Enter a correct value {e}")
+        except ValueError:
+            print("Invalid temperature. Please enter a numeric value.")
             continue
         else:
             if temperature_type == "f" :
