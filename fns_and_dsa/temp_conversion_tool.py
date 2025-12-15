@@ -1,9 +1,5 @@
-# temp_conversion_tool.py
-
-# --- 1. Define Global Conversion Factors ---
-# These are global variables. They are accessible inside any function below.
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
 
 
 
