@@ -8,7 +8,7 @@ def safe_divide( numerator: float, denominator: float ):
 
 
     except ValueError:
-        print(f"Error: Please enter numeric values only.")
+        return f"Error: Please enter numeric values only."
 
     else:
         division = round(division, 1)
