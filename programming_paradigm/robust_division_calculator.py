@@ -12,6 +12,6 @@ def safe_divide( numerator: float, denominator: float ):
         return None
     else:
         division = round(division, 1)
-        print(f"The result of the division is {division:.1f}")
+        return f"The result of the division is {division:.1f}"
 
 
