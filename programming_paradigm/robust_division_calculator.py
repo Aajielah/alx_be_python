@@ -9,10 +9,10 @@ def safe_divide( numerator: float, denominator: float ):
     except ValueError:
         print(f"Error: Please enter numeric values only.")
     else:
-        print(f"The result of the division is {division}")
+        print(f"The result of the division is {division:.2f}")
         return division
 
 
-calculate = safe_divide("1" , 88)
+calculate = safe_divide("98" , 88)
 
 print(calculate)
